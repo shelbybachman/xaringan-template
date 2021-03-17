@@ -29,13 +29,13 @@ Reading resource: https://css-tricks.com/rems-ems/
 /*-- Headings --*/
 h1, h2, h3 {
   font-weight: normal;
-  color: #562457;
+  color: #6F9283;
 }
 
 /*-- Links/anchors --*/
 a, a > code {
-  color: #88398a;
-  border-bottom: 3px solid #88398a;
+  color: #6F9283;
+  border-bottom: 3px solid #f6bd60;
   line-height: 2rem;
 }
 
@@ -55,7 +55,7 @@ a:hover { border-bottom: none;}
 .remark-code, .remark-inline-code {
   font-family: 'Inconsolata', 'Lucida Console', Monaco, monospace;
   font-size:          1em;
-  color: #88398A;
+  color: #6F9283;
 }
 
 /*-- Code chunk --*/
@@ -71,16 +71,21 @@ pre code {
 
 /*-- Inverse slides --*/
 .inverse {
-  background-color: #562457;
+  background-color: #f6bd60;
+  text-shadow: 0px 0px;
 }
 
 .inverse, .inverse h1, .inverse h2, .inverse h3, .inverse a, inverse a > code {
-  color: #fff;
+  color: #6F9283;
 }
 
 .inverse a {
-  color: #fff;
-  border-bottom: 3px solid #fff;
+  color: #6F9283;
+  border-bottom: 3px solid #f6bd60;
+}
+
+.title-slide {
+  text-shadow: 0px 0px;
 }
 
 /*-- Hides slide number from title slide --*/

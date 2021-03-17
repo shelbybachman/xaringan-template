@@ -1,23 +1,23 @@
 ---
-title: "R-Ladies Themed<br>xaringan Template"
+title: "Shelby's xaringan Template"
 subtitle: "Presentation subtitle"
-author: "R-Ladies Global"
+author: "Shelby Bachman"
 institute: "Your Institute"
 date: "March 16th, 2021"
 output:
   xaringan::moon_reader:
     lib_dir: libs
+    seal: false
     css:
       - default
       - rladies
       - rladies-fonts
       - css/rladies-mod.css
-    seal: false
     nature:
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
-      ratio: 4:3
+      ratio: "16:9"
 ---
 
 ```{r setup, include = FALSE}
@@ -33,42 +33,46 @@ knitr::opts_chunk$set(dpi = 300,            # ensures high resolution images
                       error = FALSE)        # FALSE: Suppresses error messages
 ```
 
-class: title-slide, center, middle, inverse
-background-image: url(img/PurpleSky.jpg)
+```{r meta, echo=FALSE}
+
+library(metathis)
+meta() %>%
+  meta_general(
+    description = "Shelby's xaringan template",
+    generator = "xaringan"
+  ) %>% 
+  meta_name("github-repo" = "shelbybachman/xaringan-template") %>% 
+  meta_social(
+    title = "Shelby's xaringan template",
+    url = "https://shelbybachman.github.io/xaringan-template/index.html#1",
+    image = "",
+    image_alt = "Title slide",
+    og_type = "website",
+    og_author = "Shelby Bachman",
+    twitter_card_type = "summary_large_image",
+    twitter_creator = "@shelbybachman"
+  )
+```
+
+class: title-slide, middle, inverse
+background-image: url(img/scott-webb-cactus.jpg)
 background-position: bottom
 background-size: cover
 
 # `r rmarkdown::metadata$title`
 
-Photo by [Vincentiu Solomon](https://unsplash.com/@vincentiu)
-
-???
-This slide uses:
-- a custom `title-slide` class that removes the slide number from the title slide
-- a background image
-  - background-image: url(img/PurpleSky.jpg)
-  - background-position: bottom
-  - background-size: cover
+.footnote[
+Photo by [Scott Webb](https://unsplash.com/@scottwebb)
+]
 
 ---
 class: inverse, middle, center
 
-<img style="border-radius: 50%;" 
-src="img/RLadiesGlobal.png"
-width="150px"
-/>
+# An inverse slide
 
-# R-Ladies Global 
-
-[`r fontawesome::fa("link", fill = "#FFFFFF")` rladies.org](https://rladies.org)<br/>
-[`r fontawesome::fa("twitter", fill = "#FFFFFF")` @RLadiesGlobal](https://twitter.com/rladiesglobal)<br/>
-[`r fontawesome::fa("paper-plane", fill = "#FFFFFF")` info@rladies.org](mailto:info@rladies.org)<br>
-[`r fontawesome::fa("slack", fill = "#FFFFFF")` Join the Slack](https://rladies-community-slack.herokuapp.com/)
 
 ???
 Hello! My name is R-Ladies Global and I'm excited to be here to help promote gender diversity in the R community.
-
---
 
 If you like this R-Ladies themed xaringan template, you can copy it to your computer: **usethis::use_course("spcanelon/RLadies-xaringan-template")**
 
@@ -80,24 +84,41 @@ This slide uses:
 - an image inserted with html
 
 ---
+class: center, middle
+
+# Slide with centered content in middle
+
+Centered and in the middle of the slide
+
+.left[Some text on the left...]
+
+.right[and more on the right!]
+
+---
+
+# Slide with content split left and right
+
+.pull-left[Left column]
+
+.pull-right[Right column]
+
+---
 
 .left-column[
-# R-Ladies Global
+# Slide header
 ]
 
 .right-column[
 
-## Mission 
+## Description
 
-R-Ladies is a worldwide organization whose mission is to promote Gender Diversity in the R community.
-
-The R community suffers from an underrepresentation of minority genders (including but not limited to cis/trans women, trans men, non-binary, genderqueer, agender) in every role and area of participation, whether as leaders, package developers, conference speakers, conference participants, educators, or users (see recent stats).
+Some text here.
 
 
 .footnote[
 
 ----
-Original source: https://rladies.org/about-us]
+A footer: https://rladies.org/about-us]
 ]
 
 ???
@@ -248,31 +269,15 @@ This slide uses:
 - code chunk option `fig.height = 4.5` to control the figure height
 
 ---
-class: middle, inverse, title-slide
+class: inverse, title-slide
+background-image: url(img/scott-webb-cactus.jpg)
+background-position: bottom
+background-size: cover
 
 .pull-left[
 # Thank you!
-<br/>
-## R-Ladies Global  
-
-### Promoting gender diversity in the R community
+<br><br><br><br><br><br><br>
+[`r fontawesome::fa("link", fill = "#6F9283")` shelbybachman.github.io](https://shelbybachman.github.io)<br/>
+[`r fontawesome::fa("twitter", fill = "#6F9283")` @shelbybachman](https://twitter.com/shelbybachman)<br/>
+[`r fontawesome::fa("paper-plane", fill = "#6F9283")` sbachman [at] usc [at] edu](sbachman [at] usc [dot] edu)<br>
 ]
-
-.pull-right[
-.right[
-<img style="border-radius: 50%;"
-src="img/RLadiesGlobal.png"
-width="150px" />
-
-[`r fontawesome::fa("link", fill = "#FFFFFF")` rladies.org](https://rladies.org)<br/>
-[`r fontawesome::fa("twitter", fill = "#FFFFFF")` @RLadiesGlobal](https://twitter.com/rladiesglobal)<br/>
-[`r fontawesome::fa("paper-plane", fill = "#FFFFFF")` info@rladies.org](mailto:info@rladies.org)<br>
-[`r fontawesome::fa("slack", fill = "#FFFFFF")` Join the Slack](https://rladies-community-slack.herokuapp.com/)
-]]
-
-???
-Thank you for joining me!
-You can find my contact information linked on this slide if you want to get in touch, and I'm happy to take any questions.
-
-This slide also uses:
-- the `title-slide` class, to remove the slide number at the bottom :)
